@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script type="text/javascript" src="/assets/action.js"></script>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/assets/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/assets/style.css"/>
+      <title>Chat</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="do_io();">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="/assets/materialize.min.js"></script>
+      <div class="row black  valign-wrapper cyan-text" id="top">
+        <div class="col s2 center-align"><h5 class="material-icons">account_circle</h5></div>
+        <div class="col s6"><h5 class="">Satyavrat</h5></div>
+        <div class="col s2 deep-purple-text"><span id="typing"></span></div>
+        <div class="col s2 center-align"><h5 class="material-icons">more_vert</h5></div>
+      </div>
+      <div class="black" id="chat-box">
+        <div class="row left-row valign-wrapper">
+          <div class="col s1 center-align deep-purple-text text"><h5 class="material-icons">account_circle</h5></div>
+          <div class="col s10 valign-wrapper" style="color:"><span class=" text-span deep-purple-text left-text-span">message<br/><span class="left-text-time">00:00</span>  </span></div>
+          <div class="col s1"></div>
+        </div>        
+        <div class="row right-row valign-wrapper">
+          <div class="col s1"></div>
+          <div class="col s1 push-s10 center-align cyan-text"><h5 class="material-icons">account_circle</h5></div>
+          <div class="col s10 pull-s1 valign-wrapper right-mid" style=""><span class="text-span cyan-text right-text-span">message<br/><span class="right-text-time">00:00</span>  </span></div>
+        </div>  
+
+      </div>
+      <div class="row black valign-wrapper cyan-text" id="bottom-input">
+        <div class="col s2 center-align"><h5 class="material-icons" onclick="undo_text();">undo</div>
+        <div class="input-field col s8" id="message-field">
+          <input id="input_message" type="text" class="validate" onkeypress="typing();" onkeydown="typing();" onkeyup="stopped();">
+          <label for="input_message">Enter Message</label>
+        </div>
+        <div class="col s2 center-align"><h5 class="material-icons" onclick="send_text();">send</h5></div>
+      </div>
+    </body>
+  </html>
