@@ -1,4 +1,4 @@
-var	url= "http://127.0.0.1:3000/";
+var	url= "https://chatshare.herokuapp.com/";
 var	typing= document.getElementById("typing");
 var socket= io.connect(url);
 var id;
