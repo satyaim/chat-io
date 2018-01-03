@@ -1,7 +1,7 @@
 // number of messages sent
 var send_count=0;
-// url to connect socket to
-var	url= "http://127.0.0.1:3000/";
+// url to connect socket to || http://chatshare.herokuapp.com || https://chatshare.herokuapp.com
+var	url= "https://chatshare.herokuapp.com";
 // element where to show if typing or not
 var	typing= document.getElementById("typing");
 // make socket connection
