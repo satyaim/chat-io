@@ -12,3 +12,5 @@ body {height: 100vh; max-height: 100vh; width: 100vw; max-width: 100vw;}
 .right-mid{justify-content: flex-end;}
 .left-text-span{border: 2px solid #673ab7;}
 .right-text-span{border: 2px solid cyan;}
+[class*='chat-bubble']{margin-top: 0}
+.acc-circle{margin-bottom: 0}

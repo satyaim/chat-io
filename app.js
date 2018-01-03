@@ -24,4 +24,8 @@ io.on("connection",function(socket){
 	socket.on("not_typing",function(data){
 		socket.broadcast.emit("not_typing",data);
 	});
+	socket.on("recieved",function(data){
+		console.log("recieved");
+		socket.broadcast.emit("recieved",data);
+	});
 });
