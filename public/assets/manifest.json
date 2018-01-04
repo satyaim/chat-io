@@ -1,0 +1,16 @@
+{
+  "short_name": "Chat App",
+  "name": "GoKu Chat",
+  "icons": [
+    {
+      "src": "assets/goku.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/chat/chat-screen",
+  "display": "standalone",
+  "orientation": "potrait",
+  "background_color": "black",
+  "theme_color": "cyan"
+}

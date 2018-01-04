@@ -1,6 +1,6 @@
 // number of messages sent
 var send_count=0;
-// url to connect socket to || http://chatshare.herokuapp.com || https://chatshare.herokuapp.com
+// url to connect socket to || https://chatshare.herokuapp.com || http://127.0.0.1:3000/
 var	url= "https://chatshare.herokuapp.com";
 // element where to show if typing or not
 var	typing= document.getElementById("typing");
@@ -57,7 +57,7 @@ socket.on("chat", function(data){
 	}
 	// Someone else sent message
 	else{
-		// I recieved message, let the user know
+		// I recieved message, let the sender know
 		socket.emit("recieved",{
 		sender: data.sender,
 		type: "text",
